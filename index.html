@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>LeadFlow Digital | Top Google Rankings & High-Converting Local Leads</title>
+    <meta name="title" content="LeadFlow Digital | Top Google Rankings & High-Converting Local Leads">
+    <meta name="description" content="LeadFlow Digital helps local service businesses rank #1 on Google, capture incoming leads 24/7, and automate 5-star review collection with an all-in-one system.">
+    <meta name="keywords" content="LeadFlow Digital, local lead generation agency, google profile optimization, GBP optimization, get more google reviews, top local ranking, missed call text back">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.example.com/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MarketingAgency",
+      "name": "LeadFlow Digital",
+      "url": "https://www.example.com",
+      "description": "Specialized local search engine optimization, Google Business Profile optimization, review boosters, and automated lead capture systems.",
+      "areaServed": "United Kingdom",
+      "priceRange": "£££"
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: #1e293b;
+            border-bottom: 1px solid #334155;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #38bdf8;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .logo span {
+            font-size: 0.8rem;
+            display: block;
+            color: #94a3b8;
+            font-weight: normal;
+        }
+
+        nav {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        nav button:hover, nav button.active {
+            color: #38bdf8;
+            background-color: #0f172a;
+        }
+
+        /* Main Container */
+        main {
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 30px 20px;
+            flex: 1;
+        }
+
+        /* Page View Controller */
+        .page-view {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .page-view.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Global UI Elements */
+        .btn {
+            background-color: #38bdf8;
+            color: #0f172a;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1rem;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            width: auto;
+        }
+
+        .btn:hover {
+            background-color: #7dd3fc;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background-color: #1e293b;
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+
+        /* Section Containers */
+        .section-block {
+            margin-top: 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #94a3b8;
+            max-width: 750px;
+            margin: 0 auto 30px;
+            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+        }
+
+        .tagline-pill {
+            display: inline-block;
+            background-color: #0369a1;
+            color: #e0f2fe;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Setup Steps Framework */
+        .setup-steps {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 25px;
+        }
+
+        .setup-step-item {
+            margin-bottom: 20px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #334155;
+        }
+
+        .setup-step-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .setup-step-item h3 {
+            color: #38bdf8;
+            font-size: 1.15rem;
+            margin-bottom: 6px;
+        }
+
+        /* Form Styling */
+        .contact-form {
+            background-color: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            max-width: 600px;
+            margin: 25px auto 0;
+            width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            color: #cbd5e1;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            background-color: #0f172a;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        /* Blog Specific Styling */
+        .blog-post {
+            background-color: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            margin-bottom: 30px;
+        }
+
+        .blog-post h2 {
+            color: #38bdf8;
+            font-size: clamp(1.3rem, 3vw, 1.7rem);
+            margin-bottom: 8px;
+        }
+
+        .blog-meta {
+            color: #64748b;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 10px;
+        }
+
+        .blog-post h3 {
+            color: #7dd3fc;
+            margin: 18px 0 8px 0;
+            font-size: 1.15rem;
+        }
+
+        .blog-post p {
+            color: #cbd5e1;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        /* Accordion Style FAQs */
+        .faq-item {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 16px;
+            color: #f8fafc;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-answer {
+            padding: 0 16px 16px 16px;
+            color: #94a3b8;
+            display: none;
+            border-top: 1px solid #334155;
+            padding-top: 12px;
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            background-color: #1e293b;
+            border-top: 1px solid #334155;
+            color: #64748b;
+            font-size: 0.85rem;
+            margin-top: 40px;
+        }
+
+        /* Responsive Mobile Adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px 20px;
+                gap: 12px;
+            }
+
+            .logo {
+                text-align: center;
+            }
+
+            nav {
+                width: 100%;
+                justify-content: center;
+                gap: 6px;
+            }
+
+            nav button {
+                padding: 6px 10px;
+                font-size: 0.85rem;
+            }
+
+            main {
+                padding: 20px 15px;
+            }
+
+            .section-block {
+                margin-top: 45px;
+            }
+
+            .hero-section {
+                padding: 30px 0 !important;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 14px 20px;
+            }
+
+            .setup-steps, .card, .blog-post, .contact-form {
+                padding: 18px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo" onclick="switchTab('home')">
+            LeadFlow Digital
+            <span>Automated Systems. Consistent Leads.</span>
+        </div>
+        <nav id="nav-menu">
+            <button class="nav-btn active" onclick="switchTab('home')">Home</button>
+            <button class="nav-btn" onclick="switchTab('services')">Services</button>
+            <button class="nav-btn" onclick="switchTab('blogs')">Blog</button>
+            <button class="nav-btn" onclick="switchTab('faqs')">FAQs</button>
+            <button class="nav-btn" onclick="switchTab('contact')">Contact</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <article id="home" class="page-view active">
+            <section class="hero-section" style="text-align: center; padding: 50px 0;">
+                <div class="tagline-pill">An All-In-One System to Rank on Google & Drive More Leads</div>
+                <h1 style="font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 18px; line-height: 1.2;">Rank #1 on Google & Convert Every Search Into High-Paying Leads</h1>
+                <p style="color: #94a3b8; font-size: 1.15rem; max-width: 800px; margin: 0 auto 25px;">
+                    LeadFlow Digital builds automated lead-generation engines for local service companies. We put your business at the top of Google, capture lost caller leads instantly, and automate 5-star review collection.
+                </p>
+                <button class="btn" onclick="switchTab('contact')">Get Your Free Lead Audit</button>
+            </section>
+
+            <section class="section-block">
+                <h2 class="section-title">How Local Businesses Get Consistent Leads</h2>
+                <p class="section-subtitle">Understanding the proven channels that drive high-intent local buyers—and how LeadFlow Digital executes every step for you.</p>
+
+                <div class="grid">
+                    <div class="card">
+                        <div>
+                            <h3>1. The Google Map 3-Pack</h3>
+                            <p style="color: #cbd5e1; margin-bottom: 12px;"><strong>How to get leads:</strong> Over 70% of local customers tap the top 3 listings on Google Maps when they need immediate service.</p>
+                        </div>
+                        <p style="color: #38bdf8;"><strong>How LeadFlow Digital helps:</strong> We optimize your Google Business Profile categories, fix local directory citations, and publish geotagged updates so you reach top rankings.</p>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3>2. Speed-To-Lead Phone Capture</h3>
+                            <p style="color: #cbd5e1; margin-bottom: 12px;"><strong>How to get leads:</strong> 85% of people sent to voicemail call a competitor. Getting leads requires texting missed callers within 60 seconds.</p>
+                        </div>
+                        <p style="color: #38bdf8;"><strong>How LeadFlow Digital helps:</strong> Our Missed-Call Text-Back automation detects unanswered calls and sends an instant SMS within 5 seconds to secure the lead.</p>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3>3. High Review Velocity & Trust</h3>
+                            <p style="color: #cbd5e1; margin-bottom: 12px;"><strong>How to get leads:</strong> Modern buyers ignore companies with few or low ratings. High star counts build instant trust and trigger more clicks.</p>
+                        </div>
+                        <p style="color: #38bdf8;"><strong>How LeadFlow Digital helps:</strong> We deploy automated SMS review campaigns right after job completions, converting clients into 5-star Google ratings on autopilot.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h2 class="section-title">Complete Local SEO Setup Framework</h2>
+                <p class="section-subtitle">How LeadFlow Digital builds a search-engine-ready marketing engine for your business step-by-step.</p>
+
+                <div class="setup-steps">
+                    <div class="setup-step-item">
+                        <h3>Step 1: Claim & Verify Google Business Profile (GBP)</h3>
+                        <p style="color: #cbd5e1;">We establish your profile, verify ownership, configure primary categories, and set high-converting service area boundaries.</p>
+                    </div>
+
+                    <div class="setup-step-item">
+                        <h3>Step 2: Local Keyword & Competitor Audit</h3>
+                        <p style="color: #cbd5e1;">We research geo-targeted terms local buyers type into Google and map them directly into your digital footprint.</p>
+                    </div>
+
+                    <div class="setup-step-item">
+                        <h3>Step 3: NAP Consistency & Local Citation Building</h3>
+                        <p style="color: #cbd5e1;">We synchronize your Name, Address, and Phone Number (NAP) across 50+ high-authority online directories to build Google ranking trust.</p>
+                    </div>
+
+                    <div class="setup-step-item">
+                        <h3>Step 4: On-Page Local SEO & Schema Markup</h3>
+                        <p style="color: #cbd5e1;">We embed structural LocalBusiness JSON-LD schema code alongside optimized meta titles, localized headings, and geotagged imagery.</p>
+                    </div>
+
+                    <div class="setup-step-item">
+                        <h3>Step 5: Automated Review Velocity & Lead Capture</h3>
+                        <p style="color: #cbd5e1;">We activate post-job SMS review invites and Missed-Call Text-Back to convert searchers into immediate text conversations.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section style="margin-top: 50px; background-color: #1e293b; padding: 35px 20px; border-radius: 12px; border: 1px solid #334155; text-align: center;">
+                <h2 style="font-size: clamp(1.5rem, 4vw, 2.2rem); margin-bottom: 12px;">Never Lose Another Local Lead Again</h2>
+                <p style="color: #94a3b8; max-width: 650px; margin: 0 auto 20px; font-size: 1rem;">Ready to turn missed calls into paying clients and dominate local Google search?</p>
+                <button class="btn" onclick="switchTab('contact')">Claim Your Strategy Call</button>
+            </section>
+        </article>
+
+        <article id="services" class="page-view">
+            <section style="text-align: center; margin-bottom: 30px;">
+                <h1 style="font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 10px;">Our Local Growth Services</h1>
+                <p style="color: #94a3b8;">End-to-end Google search optimization, profile management, and lead automation.</p>
+            </section>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>1. Complete Google Business Profile (GBP) Optimization</h3>
+                    <p style="color: #cbd5e1; margin-bottom: 15px;">Maximize your Google Maps real estate. We transform incomplete profiles into high-converting ranking magnets.</p>
+                    <ul style="color: #94a3b8; padding-left: 18px; font-size: 0.9rem;">
+                        <li>Primary & Secondary Category Deep Structuring</li>
+                        <li>Geo-Tagged Work Site Photo Submissions</li>
+                        <li>Weekly GBP Posts & Q&A Management</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>2. Automated 5-Star Review Booster Engine</h3>
+                    <p style="color: #cbd5e1; margin-bottom: 15px;">More reviews equal higher rankings and consumer trust. Generate positive Google reviews on complete autopilot.</p>
+                    <ul style="color: #94a3b8; padding-left: 18px; font-size: 0.9rem;">
+                        <li>Automated Post-Job SMS & Email Invites</li>
+                        <li>Direct 1-Click Google Review Links</li>
+                        <li>Private Feedback Funnel for Unhappy Clients</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>3. Top Local Search Engine Dominance & SEO</h3>
+                    <p style="color: #cbd5e1; margin-bottom: 15px;">Outrank nearby competitors on organic search. We optimize code, fix citations, and align local geo-keywords.</p>
+                    <ul style="color: #94a3b8; padding-left: 18px; font-size: 0.9rem;">
+                        <li>High-Intent Local Geo-Keyword Mapping</li>
+                        <li>JSON-LD LocalBusiness Schema Insertion</li>
+                        <li>50+ High-Authority Citation Submissions</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>4. Missed-Call Text-Back Automation</h3>
+                    <p style="color: #cbd5e1; margin-bottom: 15px;">When you're busy working, our system sends an instant, friendly SMS response within 5 seconds to capture lead details.</p>
+                    <ul style="color: #94a3b8; padding-left: 18px; font-size: 0.9rem;">
+                        <li>Instant 5-Second SMS Triggers</li>
+                        <li>2-Way Unified Mobile Inbox</li>
+                        <li>After-Hours Auto-Replies</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>5. Local Map Pack Rank Tracking & Analytics</h3>
+                    <p style="color: #cbd5e1; margin-bottom: 15px;">Monitor exact map rankings across every mile of your service zone with interactive grid tracking and monthly call reports.</p>
+                    <ul style="color: #94a3b8; padding-left: 18px; font-size: 0.9rem;">
+                        <li>Geo-Grid Local Rank Tracking</li>
+                        <li>Google Call Conversion Analytics</li>
+                        <li>Monthly Strategy Consultations</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>6. Done-For-You Local Content Engine</h3>
+                    <p style="color: #cbd5e1; margin-bottom: 15px;">We publish search-optimized localized blog posts, FAQs, and service updates that demonstrate authority to Google.</p>
+                    <ul style="color: #94a3b8; padding-left: 18px; font-size: 0.9rem;">
+                        <li>SEO Search Intent Writing</li>
+                        <li>Localized Service Area Case Studies</li>
+                        <li>Internal Linking & Structuring</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <article id="blogs" class="page-view">
+            <section style="text-align: center; margin-bottom: 30px;">
+                <h1 style="font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 10px;">Lead Generation & Local SEO Knowledge Base</h1>
+                <p style="color: #94a3b8;">Comprehensive guides on how local service businesses generate consistent leads and dominate Google rankings.</p>
+            </section>
+
+            <div class="blog-post">
+                <h2>1. How to Get Consistent Local Leads for Your Service Business</h2>
+                <div class="blog-meta">Keywords: how to get local leads, contractor lead generation | Read Time: 8 mins</div>
+                <p>Generating a steady stream of leads is the lifeblood of any local contractor or service company. Without a systematic channel, businesses fall into the trap of seasonal revenue dips and unpredictable growth.</p>
+                <h3>Step 1: Capture Top Spot on Google Maps</h3>
+                <p>Optimizing your Google Business Profile ensures your business appears when potential buyers search for immediate solutions like 'plumber near me' or 'roofing contractor'.</p>
+                <h3>Step 2: Eliminate Missed Call Drop-Offs</h3>
+                <p>Implementing an instant text-back system stops potential leads from calling the next business listed on Google when you are unable to answer the phone.</p>
+            </div>
+
+            <div class="blog-post">
+                <h2>2. How LeadFlow Digital Helps Service Businesses Scale Pipelines</h2>
+                <div class="blog-meta">Keywords: LeadFlow Digital, lead generation agency | Read Time: 6 mins</div>
+                <p>LeadFlow Digital acts as your done-for-you lead acquisition partner, taking technical SEO, GBP management, and missed call automation off your plate so you focus on job execution.</p>
+                <h3>An All-in-One Growth System</h3>
+                <p>Rather than managing multiple disjointed software platforms or agencies, our system brings search rankings, automated messaging, and review generation under one streamlined infrastructure.</p>
+            </div>
+
+            <div class="blog-post">
+                <h2>3. Why Google Business Profile is the #1 Asset for Local SEO</h2>
+                <div class="blog-meta">Keywords: Google Business Profile, GBP optimization, local map pack | Read Time: 7 mins</div>
+                <p>Your Google Business Profile (GBP) is often the very first interaction a customer has with your business. Over 70% of local service clicks go to the Google Map 3-Pack.</p>
+                <h3>Key Profile Ranking Factors</h3>
+                <p>To rank in the Map Pack, Google evaluates profile completion, primary category accuracy, review velocity, and localized citation consistency across directory platforms.</p>
+            </div>
+
+            <div class="blog-post">
+                <h2>4. The Power of Speed-to-Lead: Missed Call Text-Back Explained</h2>
+                <div class="blog-meta">Keywords: missed call text back, speed to lead, automated lead capture | Read Time: 5 mins</div>
+                <p>In local service industries, speed to lead determines who gets the customer. Research shows that 78% of customers buy from the company that responds to their inquiry first.</p>
+                <h3>How Automated SMS Solves Voicemail Loss</h3>
+                <p>When a call goes unanswered, an automated system immediately sends a personalized text offering instant assistance, keeping the potential customer engaged with your business.</p>
+            </div>
+
+            <div class="blog-post">
+                <h2>5. How 5-Star Reviews Impact Your Local Map Pack Rankings</h2>
+                <div class="blog-meta">Keywords: Google reviews, review automation, local search ranking | Read Time: 6 mins</div>
+                <p>Online reviews are not just social proof—they are a crucial algorithmic signal for Google's local search engine.</p>
+                <h3>Review Velocity and Keyword Inclusion</h3>
+                <p>Google prioritizes businesses with frequent, recent reviews that mention specific services and cities. Automating post-service review requests ensures a steady stream of 5-star feedback.</p>
+            </div>
+
+            <div class="blog-post">
+                <h2>6. On-Page Local SEO: Best Practices for Service Websites</h2>
+                <div class="blog-meta">Keywords: on page local SEO, service area pages, local keyword strategy | Read Time: 9 mins</div>
+                <p>Having a well-designed website is not enough if Google cannot understand your geographic service areas and service offerings.</p>
+                <h3>Structuring City and Service Pages</h3>
+                <p>Create dedicated pages for each major service and primary target city. Ensure meta titles, headers, and localized body copy align directly with local buyer search intent.</p>
+            </div>
+
+            <div class="blog-post">
+                <h2>7. Understanding JSON-LD Schema for Local Businesses</h2>
+                <div class="blog-meta">Keywords: LocalBusiness schema, JSON-LD structured data, technical SEO | Read Time: 8 mins</div>
+                <p>Structured data markup provides search engine crawlers with clear, standardized details about your business name, address, operating hours, and service categories.</p>
+                <h3>Why Schema Matters for Maps Integration</h3>
+                <p>By embedding LocalBusiness JSON-LD code into your website header, you reinforce the association between your physical website and your Google Business Profile listing.</p>
+            </div>
+
+            <div class="blog-post">
+                <h2>8. How Local Citations Build Trust with Google's Algorithm</h2>
+                <div class="blog-meta">Keywords: local citations, NAP consistency, local SEO directory | Read Time: 6 mins</div>
+                <p>Citations are online mentions of your business Name, Address, and Phone Number (NAP) across platforms like Yelp, YellowPages, and industry directories.</p>
+                <h3>The Threat of Inconsistent Data</h3>
+                <p>Discrepancies in your address or phone number confuse search algorithms and reduce your trust score, directly degrading your rank in Google Search and Maps.</p>
+            </div>
+
+            <div class="blog-post">
+                <h2>9. How to Handle Unhappy Customers Before They Leave Bad Reviews</h2>
+                <div class="blog-meta">Keywords: review management, customer feedback funnel, reputation management | Read Time: 7 mins</div>
+                <p>Negative reviews happen to every business, but structured feedback funnels reduce public negative ratings dramatically.</p>
+                <h3>Implementing a Smart Feedback Filter</h3>
+                <p>By routing automated follow-up messages through a feedback system, satisfied customers are directed to Google, while concerns are sent privately to management to resolve internally.</p>
+            </div>
+
+            <div class="blog-post">
+                <h2>10. Converting Web Traffic into Booked Phone Calls</h2>
+                <div class="blog-meta">Keywords: conversion rate optimization, lead capture, website leads | Read Time: 6 mins</div>
+                <p>Driving traffic to a website is only half the battle. If visitors do not contact you, your marketing expenditure is wasted.</p>
+                <h3>High-Converting Design Principles</h3>
+                <p>Place clickable call buttons, clear service guarantees, and quick contact forms above the fold on mobile views to ensure maximum conversion rates.</p>
+            </div>
+
+            <div class="blog-post">
+                <h2>11. The Role of Geo-Tagged Photos in Local Map Rankings</h2>
+                <div class="blog-meta">Keywords: geotagged photos, GBP updates, local map rank signals | Read Time: 5 mins</div>
+                <p>Regularly publishing photos from completed job sites helps signal active operational status and geographical reach directly to Google.</p>
+                <h3>Best Practices for GBP Image Uploads</h3>
+                <p>Upload authentic, high-quality images of team members and completed work with location metadata enabled to demonstrate active service coverage.</p>
+            </div>
+
+            <div class="blog-post">
+                <h2>12. Why Paid Ads + Organic Local SEO Work Better Together</h2>
+                <div class="blog-meta">Keywords: Google Ads, local SEO, omnichannel local marketing | Read Time: 7 mins</div>
+                <p>Combining paid local ads with strong organic search positioning yields maximum visibility across search engine results pages.</p>
+                <h3>Dominating Above-the-Fold Real Estate</h3>
+                <p>Appearing in both Google Local Services Ads and the organic Google Map 3-Pack builds dominant trust and increases overall click-through conversion rates.</p>
+            </div>
+
+            <div class="blog-post">
+                <h2>13. Top 5 Mistakes Contractors Make on Google Maps</h2>
+                <div class="blog-meta">Keywords: Google map mistakes, GBP suspension, local ranking errors | Read Time: 8 mins</div>
+                <p>Many business owners unintentionally violate Google's guidelines, leading to ranking demotions or account suspensions.</p>
+                <h3>Common Pitfalls to Avoid</h3>
+                <p>Avoid stuffing keywords into your official business name, creating duplicate listings, using PO Boxes as physical addresses, or neglecting customer review responses.</p>
+            </div>
+
+            <div class="blog-post">
+                <h2>14. How Voice Search is Changing Local SEO for Home Services</h2>
+                <div class="blog-meta">Keywords: voice search SEO, conversational keywords, local search trends | Read Time: 6 mins</div>
+                <p>With smart devices processing millions of voice queries daily, local search queries have become more conversational and long-tail.</p>
+                <h3>Optimizing for Natural Language Queries</h3>
+                <p>Focus on question-based headings like 'who is the best electrician near me?' and structure FAQ content to directly answer voice search inquiries.</p>
+            </div>
+
+            <div class="blog-post">
+                <h2>15. Key Metrics to Track Your Local Search Engine Growth</h2>
+                <div class="blog-meta">Keywords: local SEO analytics, ranking metrics, local lead reporting | Read Time: 7 mins</div>
+                <p>Measuring performance requires looking beyond vanity rankings to focus on metrics that directly impact bottom-line business growth.</p>
+                <h3>Essential Key Performance Indicators (KPIs)</h3>
+                <p>Track Map Pack geo-grid rankings, total direct phone calls from search, online form submissions, and customer review growth over 30 to 90-day periods.</p>
+            </div>
+        </article>
+
+        <article id="faqs" class="page-view">
+            <section style="text-align: center; margin-bottom: 25px;">
+                <h1 style="font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 10px;">Frequently Asked Questions</h1>
+                <p style="color: #94a3b8;">Common questions local business owners ask about working with LeadFlow Digital.</p>
+            </section>
+
+            <div style="max-width: 850px; margin: 0 auto;">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">1. How does LeadFlow Digital help my business get leads? <span>+</span></button>
+                    <div class="faq-answer">LeadFlow Digital gets you leads by optimizing your Google Profile for the Map 3-Pack, setting up Missed-Call Text-Back, and generating fresh 5-star Google reviews automatically.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">2. What is Missed-Call Text-Back? <span>+</span></button>
+                    <div class="faq-answer">Our system detects whenever an incoming call goes unanswered and automatically sends a text message within 5 seconds to capture lead details before they call a competitor.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">3. How fast can I see results from Local SEO? <span>+</span></button>
+                    <div class="faq-answer">Missed-Call Text-Back works on Day 1. Google Map rank optimization and review accumulation typically show significant ranking improvements within 30 to 60 days.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">4. What is the Google Map 3-Pack? <span>+</span></button>
+                    <div class="faq-answer">The Google Map 3-Pack is the top section on Google search results showing map locations and three highlighted local businesses. It earns over 70% of total local search clicks.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">5. Do I need a physical storefront to rank on Google Maps? <span>+</span></button>
+                    <div class="faq-answer">No. Service area businesses (SABs) that travel to clients, such as plumbers, roofers, and electricians, can set up a profile with hidden physical addresses while specifying target service zones.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">6. How does automated review collection work? <span>+</span></button>
+                    <div class="faq-answer">When a service job is completed, our system automatically triggers an SMS or email invite with a direct link to your Google Business Profile review form.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">7. What happens if a customer leaves a negative review? <span>+</span></button>
+                    <div class="faq-answer">Our system includes smart feedback routing options that allow unhappy clients to submit feedback directly to management before posting publicly, giving you a chance to resolve the issue.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">8. How does LeadFlow Digital track my local ranking improvements? <span>+</span></button>
+                    <div class="faq-answer">We utilize geo-grid tracking tools that measure your exact Google Maps rankings across various zip codes and miles in your primary service areas.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">9. What is NAP consistency and why is it important? <span>+</span></button>
+                    <div class="faq-answer">NAP stands for Name, Address, and Phone Number. Having identical NAP data across online directories proves legitimacy to Google and boosts map rankings.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">10. Will your system work with my existing phone line or website? <span>+</span></button>
+                    <div class="faq-answer">Yes, our systems integrate seamlessly with existing business phone numbers, mobile devices, and popular website hosting frameworks without disrupting your operations.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">11. What is local schema markup? <span>+</span></button>
+                    <div class="faq-answer">Schema markup is structured code placed on your website that directly tells search engine bots about your business type, operating hours, ratings, and service locations.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">12. How often should I post updates to my Google Business Profile? <span>+</span></button>
+                    <div class="faq-answer">Publishing updates weekly keeps your profile active, informs potential customers of promotions, and sends positive freshness signals to Google's ranking algorithms.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">13. Can you help service businesses with multiple locations? <span>+</span></button>
+                    <div class="faq-answer">Yes. We build multi-location Google Business Profile optimizations, individual location web pages, and tailored local citation strategies for expanding service companies.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">14. Is there a long-term contract required? <span>+</span></button>
+                    <div class="faq-answer">We offer flexible agreements based on your growth goals. Our focus is delivering consistent lead generation results so you choose to stay with us long-term.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">15. What makes LeadFlow Digital different from traditional marketing agencies? <span>+</span></button>
+                    <div class="faq-answer">Unlike agencies that focus on vanity metrics like impressions, we focus strictly on local search placement, instant lead conversion automation, and actual phone calls.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">16. How do geotagged photos help my search rankings? <span>+</span></button>
+                    <div class="faq-answer">Photos with geographic metadata confirm your active presence in specific service zones, reinforcing search engine trust for queries in those geographic areas.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">17. What is speed-to-lead and why does it matter? <span>+</span></button>
+                    <div class="faq-answer">Speed-to-lead is how quickly you respond to an inquiry. Texting missed callers within 60 seconds dramatically increases your chances of securing the job before competitors answer.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">18. Can bad citations hurt my Google rankings? <span>+</span></button>
+                    <div class="faq-answer">Yes. Conflicting address or phone information across the web confuses search algorithms, reducing authority and lowering map pack positioning.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">19. How do you identify the best local keywords for my area? <span>+</span></button>
+                    <div class="faq-answer">We analyze search volume data, local buyer intent, and competitor gaps to identify target keywords that generate high-converting inbound calls.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">20. What is included in the Free Lead Flow Audit? <span>+</span></button>
+                    <div class="faq-answer">Our audit examines your current Google Maps ranking, local search keywords, competitor rankings, profile optimization level, and lead capture speed gaps.</div>
+                </div>
+            </div>
+        </article>
+
+        <article id="contact" class="page-view">
+            <section style="text-align: center;">
+                <h1 style="font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 10px;">Get Your Free Lead Flow Audit</h1>
+                <p style="color: #94a3b8;">Receive a complete analysis of your local Google search rankings and lead automation gaps.</p>
+            </section>
+
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Lead Audit Request Sent Successfully!');">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Business Email</label>
+                    <input type="email" id="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Business Name & Service City</label>
+                    <textarea id="message" rows="4" placeholder="Tell us your business name and primary service area..." required></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Request Lead Flow Audit</button>
+            </form>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 LeadFlow Digital. All Rights Reserved. | Automated Systems. Consistent Leads.</p>
+    </footer>
+
+    <script>
+        function switchTab(tabId) {
+            // Hide all views
+            const views = document.querySelectorAll('.page-view');
+            views.forEach(view => {
+                view.classList.remove('active');
+            });
+
+            // Show selected view
+            const targetView = document.getElementById(tabId);
+            if (targetView) {
+                targetView.classList.add('active');
+            }
+
+            // Update nav button active states
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('onclick').includes(`'${tabId}'`)) {
+                    btn.classList.add('active');
+                }
+            });
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleFaq(buttonElement) {
+            const faqItem = buttonElement.parentElement;
+            const isOpen = faqItem.classList.contains('active');
+            
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                const symbol = item.querySelector('.faq-question span');
+                if (symbol) symbol.innerText = '+';
+            });
+
+            if (!isOpen) {
+                faqItem.classList.add('active');
+                buttonElement.querySelector('span').innerText = '-';
+            }
+        }
+    </script>
+</body>
+</html>
